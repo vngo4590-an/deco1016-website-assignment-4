@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Optus | Home Page</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Head, where menu is located -->
+  <!-- Head, where menu is located -->
+  <header class="head-content">
+    <div class="menu-container">
+      <nav class="menu-bar">
+        <!-- In the menu bar, we have 3 main objects
+            1. Menu dropdown
+            2. Home Icon
+            3. Login button
+           -->
+        <!-- Menu Drop Down -->
+        <span class="menu-open-slider">
+          <img src="img/Icons/menu button.png" id="drop-menu-icon" alt="menu dropdown" onclick="menuSliderOpen()">
+        </span>
+        <div class="menu-sidebar">
+
+          <!-- close button -->
+          <a href="#" class="menu-close-slider" onclick="menuSliderClose()">&times;</a>
+          <!-- Content -->
+          <a href="#">
+            About Us
+          </a>
+          <a href="#">
+            Mobile
+          </a>
+          <a href="#">
+            New Deals & Bundles
+          </a>
+          <a href="#">
+            Our 5G Offers
+          </a>
+          <a href="#">
+            Support
+          </a>
+          <a href="#">
+            Subscribe
+          </a>
+        </div>
+
+        <!-- Home Icon -->
+        <div class="home">
+          <a href="index.html">
+            <img id="home-icon" src="img/Logo/Optus Home.png" alt="home icon">
+          </a>
+        </div>
+
+
+      </nav>
+    </div>
+  </header>
+  <div class="form-content">
+    <!-- Aside Bar loads out previous choices -->
+    <aside class="previous-selection">
+    </aside>
+    <div class="progress-container">
+      <div class="progress"></div>
+    </div>
+    <form class="check-out" action="final.html" autocomplete="on">
+      <!-- User details -->
+      <h1 class="main-heading">Check Out</h1>
+      <div class="user-details">
+        <h2 class="form-heading">Your Personal Information</h2>
+        <section class="user-details-inputs">
+          <label for="first-name">First Name</label>
+          <input type="text" name="first-name" id="first-name" placeholder="Your First Name" required>
+          <label for="middle-name">Middle Name</label>
+          <input type="text" name="middle-name" id="middle-name" placeholder="Your Middle Name (optional)">
+          <label for="last-name">Last Name</label>
+          <input type="text" name="last-name" id="last-name" placeholder="Your Last Name" required>
+          <label for="email-address">Email</label>
+          <input type="email" name=email-address id="email-address" placeholder="e.g.: abc@gmail.com" required>
+          <label for="contact-number">Contact Number</label>
+          <input type="tel" name="contact-number" id="contact-number" placeholder="e.g.: 0412 456 789" required>
+          <label for="date-of-birth">Date Of Birth</label>
+          <input type="date" name="date-of-birth" id="date-of-birth" required>
+        </section>
+      </div>
+      <!-- Different sections will appear once is loaded-->
+      <div class="authorisation">
+        <h2 class="form-heading">Your ID</h2>
+        <section class="authorisation-input">
+          <label for="id-auth">Select your identification type</label>
+          <select name="id-auth" id="id-auth">
+            <option value="passport">Passport</option>
+            <option value="australian-license">Austalian Driver's License</option>
+          </select>
+        </section>
+      </div>
+      <!-- passport -->
+      <div class="authorisation-form" id="passport">
+        <h2 class="form-heading">Passport</h2>
+        <label for="passport-country">Passport Country</label>
+        <input type="text" id="passport-country" name="passport-country" placeholder="Australia">
+        <label for="passport-number">Passport Number</label>
+        <input type="number" id="passport-number">
+        <label for="passport-expiry-date">Expiry Date</label>
+        <input type="date" id="passport-expiry-date" name="passport-expiry-date">
+        <label for="passport-issue-date">Passport Issue Date</label>
+        <input type="passport-issue-date" id="passport-issue-date" name="passport-issue-date">
+      </div>
+
+      <!-- Driver's License -->
+      <div class="authorisation-form" id="drivers-license">
+        <h2 class="form-heading">Australian Driver's License</h2>
+        <label for="dl-state-of-issue">State Of Issue</label>
+        <select name="dl-state-of-isssue" id="dl-state-of-isssue">
+          <option value="NSW">NSW</option>
+          <option value="ACT">ACT</option>
+          <option value="QLD">QLD</option>
+          <option value="TAS">TAS</option>
+          <option value="VIC">VIC</option>
+          <option value="SA">SA</option>
+          <option value="WA">WA</option>
+          <option value="NT">NT</option>
+        </select>
+        <label for="dl-number">License Number</label>
+        <input type="number" name="dl-number" id="dl-number">
+        <label for="dl-expiry-date">License Expiry Date</label>
+        <input type="date" name="dl-expiry-date" id="dl-expiry-date">
+      </div>
+      <!-- Address -->
+      <div class="address">
+        <h2 class="form-heading">Residential</h2>
+        <label for="residential-address">Residential Address</label>
+        <input type="text" name="residential-address" id="residential-address" placeholder="123 This St" required>
+        <label for="residential-state">State</label>
+        <select name="residential-state" id="residential-state" required>
+          <option value="NSW">NSW</option>
+          <option value="ACT">ACT</option>
+          <option value="QLD">QLD</option>
+          <option value="TAS">TAS</option>
+          <option value="VIC">VIC</option>
+          <option value="SA">SA</option>
+          <option value="WA">WA</option>
+          <option value="NT">NT</option>
+        </select>
+        <label for="residential-postcode" >Postcode</label>
+        <input type="number" max="9999" name="residential-postcode" id="residential-postcode" required>
+
+        <div class="residential-duration">
+          <h3 class="form-subheading">How long have you lived here?</h2>
+            <label for="residential-year">Year</label>
+            <input type="number" name="residential-year" id="residential-year" required>
+            <label for="residential-month">Month</label>
+            <input type="number" name="residential-month" id="residential-month" required>
+        </div>
+      </div>
+      <div class="employment-status">
+        <h2 class="form-heading">Employment Details</h2>
+        <!-- User can select the age range that they are in -->
+        <label for="pre-occupation">Which options below are best describing you?</label>
+        <ul class="pre-occupation">
+          <li><input type="radio" name="pre-occupation" value="student" required>Student</li>
+          <li><input type="radio" name="pre-occupation" value="adult">Adult</li>
+          <li><input type="radio" name="pre-occupation" value="pensioner">Persioner</li>
+        </ul>
+        <!-- Now we get to the real occupation -->
+        <label for="is-employed">Are you employed?</label>
+        <ul class="is-employed">
+          <li>
+            <input type="radio" name="is-employed" value="yes" required>Yes
+          </li>
+          <li>
+            <input type="radio" name="is-employed" value="no">No
+          </li>
+        </ul>
+
+        <label for="occupation">What is your occupation?</label>
+        <input type="text" name="occupation" id="occupation" placeholder="Enter your occupation">
+
+        <label for="occupation-status">What is your occupation status?</label>
+        <select name="occupation-status" id="occupation-status" required>
+          <option value="full-time">Full Time</option>
+          <option value="part-time">Part Time</option>
+          <option value="casual">Casual</option>
+          <option value="contract">Contract</option>
+          <option value="seasonal">Seasonal</option>
+        </select>
+      </div>
+
+      <!-- Payment type -->
+      <div class="payment">
+        <h2 class="form-heading">Credit Card Details</h2>
+        <label for="cc-number"></label>
+        <input type="tel" name="cc-number" id="cc-number" placeholder="Credit Card Number" required>
+        <label for="cc-owner">Card Owner</label>
+        <input type="text" name="cc-owner" id="cc-owner" placeholder="Name On Your Card" required>
+        <label for="cc-month" >Expiry Month</label>
+        <select name="cc-month" id="cc-month" required>
+          <option value="01">January</option>
+          <option value="02">February </option>
+          <option value="03">March</option>
+          <option value="04">April</option>
+          <option value="05">May</option>
+          <option value="06">June</option>
+          <option value="07">July</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+        <label for="cc-year">Year</label>
+        <select name="cc-year" id="cc-year" required>
+          <option value="19"> 2019</option>
+          <option value="20"> 2020</option>
+          <option value="21"> 2021</option>
+          <option value="22"> 2022</option>
+          <option value="23"> 2023</option>
+          <option value="24"> 2024</option>
+        </select>
+      </div>
+      <!-- Insurance -->
+      <div class="insurance">
+        <h2 class="form-heading">Insurance</h2>
+        <p>
+          In case of loss, theft or damage, we can help you get back on track!
+        </p>
+        <p>
+          Device Protect insurance can only be taken out at the time you buy a new device from us.
+        </p>
+        <label for="insurance">Would you like to add our insurance service for $19 per month?</label>
+        <ul>
+          <li>
+            <input type="radio" name="insurance" value="yes" required>Yes
+          </li>
+          <li>
+            <input type="radio" name="insurance" value="no">No
+          </li>
+        </ul>
+
+      </div>
+      <!-- Agreement -->
+      <div class="agreement">
+        <h2 class="form-heading">Terms and Conditions</h2>
+        <label for="terms-and-conditions">By committing to this plan, you must commit to our <a
+            href="https://www.optus.com.au/about/legal#link/legal/1">terms and conditions </a></label>
+        <ul class="terms-and-conditions">
+          <li>
+            <input type="checkbox" name="terms-and-conditions" value="agree" id="terms-and-conditions" required>I agree to the
+            Terms and Conditions
+          </li>
+        </ul>
+      </div>
+      <button type="submit" class="submit" id="submit-signup-phone">submit</button>
+    </form>
+  </div>
+
+  <!-- Script |||| libaries -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script/phone.js"></script>
+  <script src="script/main.js"></script>
+  <script src="script/form.js"></script>
+  <!-- <script src="https://github.com/nosir/cleave.js/blob/master/dist/cleave.min.js"></script> -->
+  <script>
+    // Add scroll bar
+    // Measure by Windows' screen + accepting scroll as an event
+    window.addEventListener("scroll", function (e) {
+      let scrollTop = document.documentElement.scrollTop;
+      // Scroll by distance - current position
+      let scrollDistance = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollValue = 100 * scrollTop / scrollDistance;
+      // apply scroll value onto the element
+      let scrollBar = document.querySelector(".progress");
+      scrollBar.style.width = scrollValue * 1.3 + "%";
+
+
+    });
+  </script>
+  
+</body>
+
+</html>

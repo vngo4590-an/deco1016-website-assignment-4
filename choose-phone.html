@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Optus | Home Page</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Head, where menu is located -->
+    <!-- Head, where menu is located -->
+  <header class="head-content">
+        <div class="menu-container">
+          <nav class="menu-bar">
+            <!-- In the menu bar, we have 3 main objects
+              1. Menu dropdown
+              2. Home Icon
+              3. Login button
+             -->
+            <!-- Menu Drop Down -->
+            <span class="menu-open-slider">
+                <img src="img/Icons/menu button.png" id="drop-menu-icon" alt="menu dropdown" onclick="menuSliderOpen()">
+            </span>
+            <div class="menu-sidebar">
+              
+              <!-- close button -->
+              <a href="#" class="menu-close-slider"
+              onclick="menuSliderClose()">&times;</a>
+              <!-- Content -->
+              <a href="#">
+                About Us
+              </a>
+              <a href="#">
+                Mobile
+              </a>
+              <a href="#">
+                New Deals & Bundles
+              </a>
+              <a href="#">
+                Our 5G Offers
+              </a>
+              <a href="#">
+                Support
+              </a>
+              <a href="#">
+                Subscribe
+              </a>
+            </div>
+    
+            <!-- Home Icon -->
+            <div class="home">
+              <a href="index.html">
+                <img id="home-icon" src="img/Logo/Optus Home.png" alt="home icon">
+              </a>
+            </div>
+    
+            
+          </nav>
+        </div>
+      </header>
+    <form class="phone-form" action="">
+        <h1 class="header-main">Select your phone!</h1>
+        <!-- We need a div as a container to fit with the phones -->
+        <div class="phone-container">
+            <!-- for this project I just want to focus on only 2 phones -->
+            <div class="iphone"></div>
+            <div class="samsung"></div>
+        </div>
+    </form>
+
+    <!-- Script |||| libaries -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script/phone.js"></script>
+    <script src="script/main.js"></script>
+    <script>
+        loadPhoneDesription("iphone", "iphone", true, "black", true, "phone-form");
+        loadPhoneDesription("samsung", "samsung", true, "black", true, "phone-form");
+    </script>
+</body>
+
+</html>

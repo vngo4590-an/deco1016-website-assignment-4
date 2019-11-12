@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Optus | Home Page</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Head, where menu is located -->
+  <header class="head-content">
+    <div class="menu-container">
+      <nav class="menu-bar">
+        <!-- In the menu bar, we have 3 main objects
+          1. Menu dropdown
+          2. Home Icon
+         -->
+        <!-- Menu Drop Down -->
+        <span class="menu-open-slider">
+          <img src="img/Icons/menu button.png" id="drop-menu-icon" alt="menu dropdown" onclick="menuSliderOpen()">
+        </span>
+        <div class="menu-sidebar">
+
+          <!-- close button -->
+          <a href="#" class="menu-close-slider" onclick="menuSliderClose()">&times;</a>
+          <!-- Content -->
+          <a href="#">
+            About Us
+          </a>
+          <a href="#">
+            Mobile
+          </a>
+          <a href="#">
+            New Deals & Bundles
+          </a>
+          <a href="#">
+            Our 5G Offers
+          </a>
+          <a href="#">
+            Support
+          </a>
+          <a href="#">
+            Subscribe
+          </a>
+          <a href="#">
+              login
+            </a>
+        </div>
+
+        <!-- Home Icon -->
+        <div class="home">
+          <a href="index.html">
+            <img id="home-icon" src="img/Logo/Optus Home.png" alt="home icon">
+          </a>
+        </div>
+
+        
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Body part -->
+  <!-- Featured phone section -->
+  <!-- This will be updated by linked javascript7 files -->
+  <div class="featured">
+    <div class="featured-phone" id="iphone11">
+      <div class="phone-img-container">
+        <img src="img/Phone/iphone/iphone pic 1.jpg" class="main-pic" alt="featured iphone 11">
+      </div>
+
+      <div class="featured-phone-description">
+        <img src="img\Phone\iphone\iPhone_logo_white.png" class="iphone-heading" alt="iphone logo">
+        <p>New <span class="phone-key-word">shade</span>, better <span class="phone-key-word">experience</span>
+        </p>
+        <!-- List of phone features will be added below here -->
+        <ul class="feature-list iphone11-feature-list">
+        </ul>
+        <!-- Button available to buy featured phones -->
+      </div>
+
+      <a class="buy-featured" href="featured-phone.html" data-aos="fade-up" data-aos-duration="1000">Buy Now</a>
+
+    </div>
+  </div>
+  <div class="more" data-aos="fade-up" data-aos-duration="1000">
+    <a href="#other-options">Explore More</a>
+  </div>
+  <div class="other-options" id="other-options" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+    <h1>Choose an option to proceed!</h1>
+    <!-- User can choose phone -->
+    <div class="choose-option" data-aos="zoom-in-down" data-aos-anchor-placement="center-bottom">
+      <a href="choose-phone.html" class="choose-text button" id="choose-phone">Choose A Phone</a>
+    </div>
+    <h3 class="gapper">Or</h3>
+    <!-- User can choose plan -->
+    <div class="choose-option" data-aos="zoom-in-up" data-aos-anchor-placement="center-bottom">
+      <a href="choose-plan.html" class="choose-text button" id="choose-plan">Choose A Plan</a>
+    </div>
+  </div>
+
+  <!-- Script |||| libaries -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script/phone.js"></script>
+  <script src="script/main.js"></script>
+  <script>
+    localStorage.clear();
+  </script>
+</body>
+
+</html>
